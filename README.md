@@ -1,4 +1,4 @@
-#  Universal Intelligence Studio
+# Universal Intelligence Studio
 
 A sleek, Apple-inspired **Retrieval-Augmented Generation (RAG)** assistant built with Python and Streamlit. Ground frontier and open-source models with your custom documents and live web URLs under strict context-verification guardrails.
 
