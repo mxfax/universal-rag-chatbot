@@ -16,6 +16,7 @@ A sleek, Apple-inspired **Retrieval-Augmented Generation (RAG)** assistant built
 - **Zero-Retention Privacy:** Bring-Your-Own-Key (BYOK) architecture. Keys and documents are kept exclusively in temporary session memory and never stored or logged.
 - **Apple-Inspired Dark UI:** Native typography, frosted glassmorphic sidebars, interactive status indicators, and responsive mobile layout.
 - **Research Utilities:** Instant chat export (`.md`), quick conversation wiping, and context starter prompts (*Summarize*, *Key Takeaways*, *Gaps*).
+- **Live test: https://universal-rag-chatbot.streamlit.app/
 
 ---
 
