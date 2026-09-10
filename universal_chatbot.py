@@ -364,9 +364,10 @@ PROVIDER_CONFIG = {
         "base_url": "https://api.groq.com/openai/v1",
         "type": "openai_compatible",
         "models": {
-            "openai/gpt-oss-20b": "Efficient open-source model available on Groq.",
-            "openai/gpt-oss-120b": "Larger open-source model for more complex reasoning.",
-            "qwen/qwen3-32b": "High-precision multilingual reasoning model."
+            "openai/gpt-oss-120b": "Premium open-source 120B model delivering advanced reasoning and logic capabilities.",
+            "openai/gpt-oss-20b": "Highly efficient open-source 20B architecture optimized for conversational throughput.",
+            "qwen/qwen3.8-27b": "State-of-the-art multilingual reasoning engine featuring Qwen 3.8 architecture.",
+            "qwen/qwen3.6-27b": "High-precision instruction-tuned model for robust contextual tasks."
         },
         "key_guide": """
         **How to get a Free Groq API Key:**
@@ -381,10 +382,10 @@ PROVIDER_CONFIG = {
         "base_url": "https://openrouter.ai/api/v1",
         "type": "openai_compatible",
         "models": {
-            "meta-llama/llama-3.3-70b-instruct:free": "Top-tier open-source 70B model with 128k context.",
-            "deepseek/deepseek-r1:free": "Frontier reasoning model with step-by-step thinking.",
-            "google/gemma-3-12b-it:free": "Google's balanced open model with high factual accuracy.",
-            "qwen/qwen-2.5-7b-instruct:free": "Efficient multilingual conversational assistant."
+            "meta-llama/llama-4-70b-instruct:free": "Top-tier Llama 4 architecture offering expansive context windows and precise instruction following.",
+            "deepseek/deepseek-r1:free": "Frontier reasoning model engineered for step-by-step logic and mathematical analysis.",
+            "google/gemini-3.5-flash-lite:free": "Google's ultra-low latency foundation model designed for rapid factual retrieval.",
+            "qwen/qwen3.8-7b-instruct:free": "Efficient multilingual assistant built on the advanced Qwen 3.8 framework."
         },
         "key_guide": """
         **How to get a Free OpenRouter API Key:**
@@ -399,8 +400,8 @@ PROVIDER_CONFIG = {
         "base_url": "https://api.cerebras.ai/v1",
         "type": "openai_compatible",
         "models": {
-            "llama3.3-70b": "High-speed inference on Wafer-Scale engine (~2,000 tokens/sec).",
-            "llama3.1-8b": "Instant low-latency model for quick contextual extractions."
+            "llama4-70b": "Wafer-Scale engine accelerated Llama 4 70B, achieving unprecedented inference speeds.",
+            "llama4-8b": "Instantaneous low-latency Llama 4 variant tailored for rapid contextual extraction."
         },
         "key_guide": """
         **How to get a Free Cerebras API Key:**
@@ -414,9 +415,9 @@ PROVIDER_CONFIG = {
         "base_url": "https://api.mistral.ai/v1",
         "type": "openai_compatible",
         "models": {
-            "mistral-small-latest": "Cost-effective, highly accurate model for RAG & summarization.",
-            "codestral-latest": "Specialized coding and structured data reasoning model.",
-            "mistral-large-latest": "Flagship model with strong multilingual reasoning."
+            "mistral-large-latest": "Flagship Mistral architecture delivering elite multilingual reasoning and comprehension.",
+            "mistral-small-latest": "Cost-effective, high-accuracy inference engine optimized for RAG and summarization.",
+            "codestral-latest": "Specialized architecture dedicated to complex coding and structured data synthesis."
         },
         "key_guide": """
         **How to get a Free Mistral API Key:**
@@ -428,10 +429,9 @@ PROVIDER_CONFIG = {
     "Google Gemini": {
         "type": "gemini",
         "models": {
-            "gemini-2.5-flash": "Fast, high-tier multimodal performance.",
-            "gemini-2.5-pro": "Advanced analytical reasoning for documents & code.",
-            "gemini-2.5-flash-lite": "Ultra-low latency inference for quick tasks.",
-            "gemini-2.0-flash": "Responsive multi-task foundation model."
+            "gemini-3.8-flash": "Google's premier high-tier multimodal model offering unparalleled analytical intelligence.",
+            "gemini-3.7-flash": "Robust workhorse architecture balancing extreme speed with high cognitive performance.",
+            "gemini-3.5-flash-lite": "Ultra-low latency inference engine designed for instantaneous task execution."
         },
         "key_guide": """
         **How to get a Google Gemini API Key:**
@@ -444,9 +444,10 @@ PROVIDER_CONFIG = {
         "base_url": "https://api.openai.com/v1",
         "type": "openai_compatible",
         "models": {
-            "gpt-4o": "Multimodal flagship model for complex document context.",
-            "gpt-4o-mini": "Fast, lightweight model for high-speed indexing.",
-            "o3-mini": "Advanced reasoning engine for math, logic, and coding."
+            "gpt-6-astra": "Next-generation flagship architecture setting the industry benchmark for complex reasoning.",
+            "gpt-5.6-sol": "Advanced primary foundation model delivering superior multimodal comprehension.",
+            "gpt-5.6-terra": "Balanced inference engine engineered for extensive document context processing.",
+            "gpt-5.6-luna": "High-velocity, lightweight model optimized for rapid indexing and cost efficiency."
         },
         "key_guide": """
         **How to get an OpenAI API Key:**
@@ -458,9 +459,9 @@ PROVIDER_CONFIG = {
     "Anthropic Claude": {
         "type": "anthropic",
         "models": {
-            "claude-3-7-sonnet-20250219": "State-of-the-art hybrid reasoning model.",
-            "claude-3-5-sonnet-20241022": "High intelligence with nuanced comprehension.",
-            "claude-3-5-haiku-20241022": "Low latency with high factual accuracy."
+            "claude-opus-5": "State-of-the-art flagship model featuring unparalleled hybrid reasoning and nuance.",
+            "claude-5-mythos": "Advanced cognitive architecture designed for complex analytical synthesis.",
+            "claude-5-fable": "High-speed inference model delivering exceptional factual accuracy and minimal latency."
         },
         "key_guide": """
         **How to get an Anthropic API Key:**
@@ -486,7 +487,7 @@ def verify_api_key(provider, api_key, model_name=None):
             import anthropic
             client = anthropic.Anthropic(api_key=api_key)
             client.messages.create(
-                model=model_name or "claude-3-5-haiku-20241022",
+                model=model_name or "claude-5-fable",
                 max_tokens=1,
                 messages=[{"role": "user", "content": "ping"}]
             )
