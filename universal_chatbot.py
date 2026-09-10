@@ -364,10 +364,12 @@ PROVIDER_CONFIG = {
         "base_url": "https://api.groq.com/openai/v1",
         "type": "openai_compatible",
         "models": {
-            "llama-3.3-70b-versatile": "Fast 70B reasoning model (~300+ tokens/sec).",
+            # Removed: "llama-3.3-70b-versatile"
             "llama-3.1-8b-instant": "Ultra-low latency lightweight workhorse.",
-            "qwen/qwen-2.5-32b": "High-precision multilingual reasoning model.",
-            "deepseek-r1-distill-llama-70b": "Deep reasoning model for math, code, and logic."
+            "meta-llama/llama-4-scout-17b-16e-instruct": "High TPM Llama 4 variant for longer context tasks.",
+            "openai/gpt-oss-20b": "Efficient open-source model available on Groq.",
+            "openai/gpt-oss-120b": "Larger open-source model for more complex reasoning.",
+            "qwen/qwen3-32b": "High-precision multilingual reasoning model."
         },
         "key_guide": """
         **How to get a Free Groq API Key:**
