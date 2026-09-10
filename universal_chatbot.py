@@ -364,9 +364,6 @@ PROVIDER_CONFIG = {
         "base_url": "https://api.groq.com/openai/v1",
         "type": "openai_compatible",
         "models": {
-            # Removed: "llama-3.3-70b-versatile"
-            "llama-3.1-8b-instant": "Ultra-low latency lightweight workhorse.",
-            "meta-llama/llama-4-scout-17b-16e-instruct": "High TPM Llama 4 variant for longer context tasks.",
             "openai/gpt-oss-20b": "Efficient open-source model available on Groq.",
             "openai/gpt-oss-120b": "Larger open-source model for more complex reasoning.",
             "qwen/qwen3-32b": "High-precision multilingual reasoning model."
